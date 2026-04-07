@@ -1,16 +1,14 @@
-# 讀取輸入
-k = int(input(""))  # 第一行為測試組數
-results = []  # 用來儲存結果
+#一顆骰子一共有6面,從1~6的點數,若您在玩“18倒啊”,出現3個同樣點數的骰子,稱為豹子。
 
-# 處理每一組輸入
-for _ in range(k):
-    dice = list(map(int, input("").split()))  # 輸入3個點數
-    # 判斷是否為豹子
-    if dice[0] == dice[1] == dice[2]:
-        results.append("Yes")
+#輸入格式:
+#第一行輸入整數 k 代表有 k 組測資,接下來有 k 行,每一行輸入3個骰子點數。
+#輸出格式:
+#輸出 k 行,若有豹子,則輸出“Yes”,否則輸出“No”。
+
+N =eval(input(''))
+for i in range(N):
+    L =input('').split(' ')
+    if L[0] ==L[1] ==L[2]:
+        print('Yes')
     else:
-        results.append("No")
-
-# 輸出結果
-for result in results:
-    print(result)
+        print('No')

@@ -1,21 +1,5 @@
-a=int(input(""))
-result=[]
-for _ in range(a):
+#輸入 1 個字串, 將其字串反轉後且在每個字元間插入豆號輸出, 例如
 
-    # 讀取輸入字串
-    text = input("")
-
-    # 去掉最後可能存在的換行符號
-    text = text.strip()
-
-    # 將字串反轉
-    reversed_text = text[::-1]
-
-    # 在每個字元之間插入逗號
-    output = ",".join(reversed_text)
-
-    # 輸出結果
-    result.append(output)
-
-for x in result:
-    print(x)
+#輸入:“Orange”, 先反轉成”egnarO”, 在中間插入豆號”e,g,n,a,r,O”.
+#注意 1:讀入之字串, 最後面的字元為’\n’(請判斷最後一個字元就不要在迴圈中)
+#注意 2:輸出的字串, 最後面不可以有逗號(請判斷最後一個字元就不要再加豆號)
