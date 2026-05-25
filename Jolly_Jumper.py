@@ -19,3 +19,18 @@
 #4 1 4 2 3      Jolly
 #5 1 4 2 -1 6   Not jolly
 
+LS = input().split(' ')
+N = int(LS[0])
+RLS =[]
+DescLS =[]
+for i in range(1,len(LS)-1):
+    AbsV =abs(eval(LS[i])-eval(LS[i+1]))
+    RLS.append(AbsV)
+    DescLS.append(N-i)
+
+if RLS == DescLS:
+    print('Jolly')
+else:
+    print('Not jolly')
+
+

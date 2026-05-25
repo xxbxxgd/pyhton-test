@@ -1,20 +1,20 @@
-def find_median(a, b, c):
-    # 找出三個數字中的中間數
-    return sorted([a, b, c])[1]
+#請設計一個程式可以讀入三個不同值的整數後找到並輸出中間數值的整數。請
+#看下面範例說明。
+#輸入格式:
+#輸入的第一列會有一個整數 T (1 <= T <= 200) 表示測試資料的組數,每組測
+#試有三筆整數,這三個整數值均不同。
+#輸出格式:
+#輸出資料即為三個整數的中間數。
+#輸入範例: 輸出範例:
+#5 
+#10 20 30   20
+#55 88 22   55
+#13 19 16   16
+#7 32 4     7
+#68 79 14   68
 
-def main():
-    # 讀取測試資料組數
-    t = int(input(""))
-    results = []
-    for _ in range(t):
-        # 讀取一組測試資料（三個整數）
-        a, b, c = map(int, input("").split())
-        # 找出中間數並記錄結果
-        results.append(find_median(a, b, c))
-    
-    # 輸出所有結果
-    print("\n".join(map(str, results)))
-
-if __name__ == "__main__":
-    # 主程式入口
-    main()
+N =eval(input(''))
+for i in range(N):
+    LS = input().split(' ')
+    sLS = sorted(LS)
+    print(sLS[1])
