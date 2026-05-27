@@ -1,25 +1,15 @@
-k = int(input(""))
-results = []
+#質數是指在大於 1 的整數中,除了 1 和該數本身,無法被其它整數整除的數。
+#例如 2, 3, 5, 7 是質數,6 = 2×3 不是質數。
+#輸入格式:
+#第一行輸入整數 kk 代表有 kk 組測資,1 ≤ kk ≤ 100,接下來有 kk 行,每一行
+#輸入一個整數 nn,
+#2 ≤ nn < 1018。
+#輸出格式:
+#輸出 kk 行,若 nn 是質數,則輸出”n: YES”,否則輸出”n: NO”。
 
-for _ in range(k):
-    n = int(input(""))
-    if n < 2:
-        results.append(f"{n}: NO")
-    elif n in (2, 3):
-        results.append(f"{n}: YES")
-    elif n % 2 == 0 or n % 3 == 0:
-        results.append(f"{n}: NO")
-    else:
-        i = 5
-        is_prime = True
-        while i * i <= n:
-            if n % i == 0 or n % (i + 2) == 0:
-                is_prime = False
-                break
-            i += 6
-        if is_prime:
-            results.append(f"{n}: YES")
-        else:
-            results.append(f"{n}: NO")
+#輸入範例: 輸出範例:
+#3 
+#1223       1223: YES
+#69997867   69997867: YES
+#123456789  123456789: NO
 
-print("\n".join(results))
